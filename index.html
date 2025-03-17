@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="周国呈 - AI训练师/AI标注专家/自媒体创作者 - 个人作品集与简介">
+    <meta name="keywords" content="AI训练师,数据标注,机器学习,周国呈,AI,人工智能">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>ZHOU GUOCHENG | AI训练师/AI标注</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap">
+    <script>
+        // 图片错误处理函数
+        function handleImageError(img) {
+            img.onerror = null; // 防止无限循环
+            // 设置默认占位图
+            img.src = 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22400%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_17b00%20text%20%7B%20fill%3A%23ffffff%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A20pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_17b00%22%3E%3Crect%20width%3D%22400%22%20height%3D%22500%22%20fill%3D%22%23a64dff%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22148.515625%22%20y%3D%22259.1%22%3E图片%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E';
+            img.alt = '图片无法加载';
+        }
+        
+        // 注册Service Worker以支持离线访问
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('service-worker.js')
+                    .then(function(registration) {
+                        console.log('ServiceWorker 注册成功: ', registration.scope);
+                    })
+                    .catch(function(error) {
+                        console.log('ServiceWorker 注册失败: ', error);
+                    });
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    
+    <!-- 背景浮动气泡 -->
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    
+    <!-- 科技蛇形元素 -->
+    <div class="cyber-snake">
+        <div class="snake-path">
+            <div class="snake-node"></div>
+        </div>
+        <div class="snake-path">
+            <div class="snake-node"></div>
+        </div>
+        <div class="snake-path">
+            <div class="snake-node"></div>
+        </div>
+        <div class="snake-path">
+            <div class="snake-node"></div>
+        </div>
+    </div>
+    
+    <!-- 蛇眼元素 -->
+    <div class="snake-eyes">
+        <div class="snake-eye"></div>
+        <div class="snake-eye"></div>
+    </div>
+    
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <div class="header-logo">
+                <div class="header-logo-text">ZHOU <span class="accent">GUOCHENG</span></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active"></a></li>
+                    <li><a href="#about"></a></li>
+                    <li><a href="#gallery"></a></li>
+                    <li><a href="#social"></a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="scrollable-content">
+        <!-- 主页区域 -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="main-title">你好，我是<span class="accent">周国呈</span></h1>
+                    <h2 class="subtitle">AI训练师 / AI标注/自媒体创作者/户外运动</h2>
+                    <p>热爱创造，通过AI技术构建数字生活，探索人工智能与创意的完美结合</p>
+                    <div class="tags">
+                        <span class="tag">AI模型训练</span>
+                        <span class="tag">数据标注</span>
+                        <span class="tag">机器学习</span>
+                        <span class="tag">创意设计</span>
+                    </div>
+                    <div class="cta-buttons">
+                        <a href="#gallery" class="btn primary">浏览作品</a>
+                        <a href="#social" class="btn outline">社交主页</a>
+                        <a href="#contact" class="btn outline" style="--btn-color: #a64dff;">联系我</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-frame">
+                        <img src="./微信图片_20250316130746.jpg" alt="微信二维码" class="profile-image" onerror="handleImageError(this)">
+                        <div class="stars">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                        </div>
+                    </div>
+                    <div class="tech-icons">
+                        <div class="tech-icon" style="--delay: 0.1s;"></div>
+                        <div class="tech-icon" style="--delay: 0.3s;"></div>
+                        <div class="tech-icon" style="--delay: 0.5s;"></div>
+                        <div class="tech-icon" style="--delay: 0.7s;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>向下滚动</span>
+                <div class="arrow"></div>
+            </div>
+        </section>
+
+        <!-- 关于我区域 -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">关于<span class="accent">我</span></h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>我是<strong>周国呈</strong>，一名专业的AI训练师和数据标注专家。我致力于开发高质量的机器学习模型，通过优化数据集和训练流程，提升AI系统的性能和可靠性。</p>
+                        <p>我在计算机视觉、自然语言处理和生成式AI领域拥有丰富经验。同时，我也热衷于探索AI技术与创意设计的结合，创造出令人惊叹的数字内容。</p>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="150">0</span>
+                                <span class="stat-label"></span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="45">0</span>
+                                <span class="stat-label"></span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="12000">0</span>
+                                <span class="stat-label"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-cloud">
+                        <span class="skill" style="--delay: 0s;">机器学习</span>
+                        <span class="skill" style="--delay: 0.1s;">深度学习</span>
+                        <span class="skill" style="--delay: 0.2s;">数据标注</span>
+                        <span class="skill" style="--delay: 0.3s;">计算机视觉</span>
+                        <span class="skill" style="--delay: 0.4s;">自然语言处理</span>
+                        <span class="skill" style="--delay: 0.5s;">大语言模型</span>
+                        <span class="skill" style="--delay: 0.6s;">AG</span>
+                        <span class="skill" style="--delay: 0.7s;">Rewards</span>
+                        <span class="skill" style="--delay: 0.8s;">数据分析</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 社交媒体区域 -->
+        <section id="social" class="social">
+            <div class="container">
+                <h2 class="section-title text-center">社交<span class="accent">媒体</span></h2>
+                
+                <!-- 小红书展示 -->
+                <div class="platform xiaohongshu">
+                    <div class="platform-header text-center">
+                        <h3><span class="platform-icon xhs"></span>小红书精选</h3>
+                        <a href="https://www.xiaohongshu.com/user/profile/算力研究所" class="platform-link">@算力研究所 →</a>
+                    </div>
+                    <div class="xiaohongshu-grid three-columns">
+                        <div class="xhs-item">
+                            <a href="https://www.xiaohongshu.com/explore/67d3d0d4000000000603bf0b" target="_blank">
+                                <div class="xhs-img">
+                                    <img src="./imgs/804954bbdd6626f48c60bfdc83cf572.jpg" alt="AI行业大爆发" style="width: 100%; height: 100%; object-fit: cover;" onerror="handleImageError(this)">
+                                </div>
+                                <div class="xhs-info">
+                                    <p class="xhs-title">3月AI行业大爆发！这些变化太震撼了吧！🤯</p>
+                                    <div class="xhs-stats">
+                                        <span>♥ 1.5k</span>
+                                        <span>💬 89</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="xhs-item">
+                            <a href="https://www.xiaohongshu.com/explore/67d4eec1000000001203f182" target="_blank">
+                                <div class="xhs-img">
+                                    <img src="./imgs/804954bbdd6626f48c60bfdc83cf572.jpg" alt="AI简报" style="width: 100%; height: 100%; object-fit: cover;" onerror="handleImageError(this)">
+                                </div>
+                                <div class="xhs-info">
+                                    <p class="xhs-title">三月十五日AI简报：技术突破与应用爆发🚀</p>
+                                    <div class="xhs-stats">
+                                        <span>♥ 2.3k</span>
+                                        <span>💬 156</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="xhs-item">
+                            <a href="https://www.xiaohongshu.com/explore/67d65aa6000000000302bfc9" target="_blank">
+                                <div class="xhs-img">
+                                    <img src="./imgs/804954bbdd6626f48c60bfdc83cf572.jpg" alt="AI新动态" style="width: 100%; height: 100%; object-fit: cover;" onerror="handleImageError(this)">
+                                </div>
+                                <div class="xhs-info">
+                                    <p class="xhs-title">三月十六日AI简报：今日科技爆发新动态🚀</p>
+                                    <div class="xhs-stats">
+                                        <span>♥ 3.7k</span>
+                                        <span>💬 215</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 抖音展示 -->
+                <div class="platform douyin">
+                    <div class="platform-header text-center">
+                        <h3><span class="platform-icon dy"></span>抖音精选</h3>
+                        <a href="https://www.douyin.com/user/self?from_tab_name=main&showTab=like" class="platform-link" target="_blank">@我的抖音 →</a>
+                    </div>
+                    <div class="douyin-grid three-columns">
+                        <div class="dy-item">
+                            <a href="https://v.douyin.com/i5W5NsNV/" target="_blank">
+                                <div class="dy-video">
+                                    <img src="./imgs/ba9ee6c3a2bb4ad26d3c59b08184ecb.png" alt="抖音视频1" style="width: 100%; height: 100%; object-fit: cover;" onerror="handleImageError(this)">
+                                    <div class="play-btn"></div>
+                                </div>
+                                <div class="dy-info">
+                                    <p class="dy-title">AI相关优秀创作者</p>
+                                    <div class="dy-stats">
+                                        <span>♥ 21.5k</span>
+                                        <span>💬 1.2k</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dy-item">
+                            <a href="https://v.douyin.com/i5W5Rkoh/" target="_blank">
+                                <div class="dy-video">
+                                    <img src="./imgs/eeaf62bef8df8f603629e1398cb3163.png" alt="抖音视频2" style="width: 100%; height: 100%; object-fit: cover;" onerror="handleImageError(this)">
+                                    <div class="play-btn"></div>
+                                </div>
+                                <div class="dy-info">
+                                    <p class="dy-title">AI相关优秀创作者</p>
+                                    <div class="dy-stats">
+                                        <span>♥ 45.3k</span>
+                                        <span>💬 3.8k</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="dy-item">
+                            <a href="https://v.douyin.com/Msh-FyeN_Gg/" target="_blank">
+                                <div class="dy-video">
+                                    <img src="./imgs/ffeefb10b1ef33bf512473e0798d5fd.png" alt="抖音视频3" style="width: 100%; height: 100%; object-fit: cover;" onerror="handleImageError(this)">
+                                    <div class="play-btn"></div>
+                                </div>
+                                <div class="dy-info">
+                                    <p class="dy-title">AI相关</p>
+                                    <div class="dy-stats">
+                                        <span>♥ 32.7k</span>
+                                        <span>💬 2.3k</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系区域 -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">联系<span class="accent">我</span></h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <p>如果您有合作意向或者其他问题，请随时与我联系。</p>
+                        <div class="social-links centered">
+                            <a href="https://www.xiaohongshu.com/user/profile/5df7a0c7000000000100863e" target="_blank" class="social-link large"><span class="platform-icon xhs"></span>小红书</a>
+                            <a href="https://www.douyin.com/user/self?from_tab_name=main&showTab=like" target="_blank" class="social-link large"><span class="platform-icon dy"></span>抖音</a>
+                            <a href="#" class="social-link large"><span class="platform-icon wechat"></span>微信</a>
+                        </div>
+                        <p class="contact-phone"><i class="phone-icon"></i>19108190591</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 页脚 -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">ZHOU <span class="accent">GUOCHENG</span></div>
+                    <p>AI训练师 · 数据标注专家</p>
+                    <div class="footer-links">
+                        <a href="#home">HOME</a>
+                        <a href="#about">ABOUT</a>
+                        <a href="#gallery">WORKS</a>
+                        <a href="#social">SOCIAL</a>
+                    </div>
+                    <p class="copyright">© 2024 周国呈 AI个人空间. 保留所有权利.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 视频模态框 -->
+    <div class="video-modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="video-container">
+                <div class="video-placeholder">视频播放区</div>
+            </div>
+            <div class="video-caption">
+                <h3>视频标题</h3>
+                <p>视频描述内容...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
